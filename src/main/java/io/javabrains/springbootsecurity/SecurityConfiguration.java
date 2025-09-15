@@ -78,7 +78,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         List<String> matchers = new ArrayList<>(
-                Arrays.asList("/health"
+                Arrays.asList("/health", "/api/user-locations"
                         ));
         web.ignoring()
                 .antMatchers(matchers.toArray(new String[matchers.size()]));
